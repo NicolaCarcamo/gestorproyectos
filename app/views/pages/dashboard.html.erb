@@ -1,0 +1,33 @@
+<nav class="navbar navbar-dark bg-primary justify-content-between">
+    <a class="navbar-brand ps-5">Buscar proyecto</a>
+    <form class="form-inline">
+        <select name="estado" class="form-select" aria-label="Default select example">
+            <option selected>Abre este menu</option>
+            <option value="propuesta">Propuesta</option>
+            <option value="en_progreso">En progreso</option>
+            <option value="terminado">Terminado</option>
+        </select>
+        <button class="btn btn-outline-light my-3 my-sm-0" type="submit">Buscar</button>
+    </form>
+</nav>
+
+<div class="container py-4">
+    <table class="table">
+        <tr class="table-primary">
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Estado del proyecto</th>
+            <th>Fecha de inicio</th>
+            <th>Fecha de finalización</th>
+        </tr>
+        <% @projects.each do |project| %>
+            <tr>
+                <td><%= project.name %></td>
+                <td><%= project.description %></td>
+                <td><%= project.state %></td>
+                <td><%= project.startdate %></td>
+                <td><%= project.finishdate %></td>
+            </tr>
+        <% end %>
+    </table>
+</div>
