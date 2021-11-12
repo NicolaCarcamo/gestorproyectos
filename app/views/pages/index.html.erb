@@ -1,21 +1,20 @@
 <div class="container pt-3">
     <h2>Crear Proyecto</h2>
-    <form method="get" action="pages/dashboard">
+    <form method="get" action="/pages/dashboard">
         <div class="mb-3">
             <label for="name" class="form-label">Nombre del proyecto</label>
-            <input type="name" class="form-control">
+            <input name="name" type="name" id="name" class="form-control">
         </div>
 
         <div class="mb-3">
             <label for="description" class="form-label">Descripción</label>
-            <textarea type="description" class="form-control"></textarea>
+            <textarea name="description" type="description" class="form-control"></textarea>
         </div>
 
         <div class="mb-3">
             <label for="state" class="form-label">Estado del proyecto</label>
-            <select type="state" class="form-select" aria-label="Default select example">
-                <option selected>Abre este menu</option>
-                <option value="propuesta">Propuesta</option>
+            <select name="state" id="state" class="form-select" aria-label="Default select example">
+                <option value="propuesta" selected="selected">Propuesta</option>
                 <option value="en_progreso">En progreso</option>
                 <option value="terminado">Terminado</option>
             </select>
@@ -23,12 +22,12 @@
 
         <div class="mb-3">
             <label for="startdate" class="form-label">Fecha de inicio</label>
-            <input type="startdate" class="form-control" placeholder="YYYY-MM-DD">
+            <input name="startdate" type="startdate" class="form-control" placeholder="YYYY-MM-DD">
         </div>
 
         <div class="mb-3">
             <label for="finishdate" class="form-label">Fecha de finalización</label>
-            <input type="finishdate" class="form-control" placeholder="YYYY-MM-DD">
+            <input name="finishdate" type="finishdate" class="form-control" placeholder="YYYY-MM-DD">
         </div>
         
         <button type="submit" class="btn btn-primary">Crear</button>

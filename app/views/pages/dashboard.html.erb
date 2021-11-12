@@ -1,8 +1,8 @@
 <nav class="navbar navbar-dark bg-primary justify-content-between">
     <a class="navbar-brand ps-5">Buscar proyecto</a>
-    <form class="form-inline">
-        <select name="estado" class="form-select" aria-label="Default select example">
-            <option selected>Abre este menu</option>
+    <form class="form-inline me-5">
+        <select name="state" class="form-select mb-1" aria-label="Default select example">
+            <option value="" selected>Abre este menu</option>
             <option value="propuesta">Propuesta</option>
             <option value="en_progreso">En progreso</option>
             <option value="terminado">Terminado</option>
@@ -12,13 +12,13 @@
 </nav>
 
 <div class="container py-4">
-    <table class="table">
+    <table class="table table-striped">
         <tr class="table-primary">
-            <th>Nombre</th>
-            <th>Descripción</th>
-            <th>Estado del proyecto</th>
-            <th>Fecha de inicio</th>
-            <th>Fecha de finalización</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Descripción</th>
+            <th scope="col">Estado del proyecto</th>
+            <th scope="col">Fecha de inicio</th>
+            <th scope="col">Fecha de finalización</th>
         </tr>
         <% @projects.each do |project| %>
             <tr>
